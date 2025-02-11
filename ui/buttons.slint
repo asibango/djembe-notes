@@ -1,0 +1,25 @@
+export component Button_1 {
+    Rectangle {
+        width: 150px;
+        height: 60px;
+        border-width: 3px;
+        border-color: black;
+        border-radius: 12px;
+        TouchArea {
+            width: parent.width;
+            height: parent.height;
+            //clicked => {rect1.background = #ff0;}
+        }
+        Image {
+            source: @image-url("/home/asi/coding/slint-app/drawings/stem4cut.png");
+            x:1px;
+            y:10px;
+            colorize: black;
+            horizontal-alignment: center;
+            
+            
+            
+        }
+        }
+    
+}
