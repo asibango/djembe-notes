@@ -1,73 +1,27 @@
 import { Button, VerticalBox, GridBox } from "std-widgets.slint";
+import { left-panel } from "left-panel.slint";
+import { sheet } from "sheet.slint";
 
 
     
     
 
 export component AppWindow inherits Window {
+    width: 850px;
+    height: 800px;
+
      
     Rectangle {
-        width: 800px;
-        height: 800px;
+        //width: 800px;
+       //height: 800px;
         background: lightblue;
         border-width: 3px;
         border-color: black;
         border-radius: 12px;
 
-        Rectangle {
-            width: 776px;
-            height: 160px;
-            background: #abc1cf;
-            y: 13px;
-            border-radius: 12px;
-            border-width: 3px;
-            border-color: black;
-
-            GridLayout {
-                padding: 15px;
-                spacing: 10px;
-
-                rect1 := Rectangle {
-                    width: 150px;
-                    height: 60px;
-                    border-width: 3px;
-                    border-color: black;
-                    border-radius: 12px;
-                    TouchArea {
-                        width: parent.width;
-                        height: parent.height;
-                        clicked => {rect1.background = #ff0;}
-                    }
-                    Image {
-                        source: @image-url("/home/asi/coding/slint-app/drawings/stem4cut.png");
-                        x:1px;
-                        y:10px;
-                        colorize: black;
-                        horizontal-alignment: center;
-                        
-                        
-                        
-                    }
-                    }
-                }
-        }
-    }
-
-        Rectangle {
-            width: 776px;
-            height: 600px;
-            background: #abc1cf;
-            y: 214px;
-            border-radius: 12px;
-            border-width: 3px;
-            border-color: black;
-        }
-
-
-       
-
-     
-    }
+        left-panel {}
+        sheet {}
+    }     
+}
 
     
-
